@@ -1,0 +1,28 @@
+{
+  "name": "yle",
+  "version": "0.0.1",
+  "description": "Command line tool for viewing news feeds from the Finnish Broadcasting Company (Yle).",
+  "main": "yle.js",
+  "dependencies": {
+    "feedparser": "^0.19.2",
+    "image-to-ascii": "^1.3.0",
+    "moment": "^2.9.0",
+    "request": "^2.51.0"
+  },
+  "devDependencies": {},
+  "bin": {
+    "yle": "yle.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yle",
+    "rss",
+    "news",
+    "feed",
+    "uutiset"
+  ],
+  "author": "Ville Juutilainen",
+  "license": "ISC"
+}
