@@ -58,10 +58,17 @@ var asciiNews = function(options,asciiNewsDone) {
   var finalizeOutput = function() {
     if(outputElements.headerImage && outputElements.list) {
 
-      var parsedList = outputElements.list.map(function(item){
+      var parsedList = outputElements.list.map(function(item,index){
         var time = moment(item.pubDate).fromNow();
         return ' ' + time + '\t' + item.title+'\n';
-      }).reverse().join('');
+      });
+
+      if(process.argv[2] === 'paauutiset' || process.argv[2] === 'luetuimmat') {
+        parsedList = parsedList.join('');
+      }
+      else {
+        parsedList = parsedList.reverse().join('');
+      }
 
       var headerText = '\t\t' + outputElements.list[0].meta['rss:title']['#'] + '\n' + '\n';
 
