@@ -94,7 +94,7 @@ if(selectedSection === 'paauutiset' || selectedSection === 'uutiset' || selected
 
 var options = {
   rsspath: rsspath,
-  imagepath: './yle.png'
+  imagepath: __dirname+'/yle.png'
 };
 
 asciiNews(options, function (asciiOutput) {
